@@ -9,5 +9,5 @@ import java.util.List;
 @AllArgsConstructor
 public class CreateAndEditRestaurantRequestMenu {
     private final String name;
-    private final String price;
+    private final int price;
 }
