@@ -16,6 +16,7 @@ public class TestRepositoryImpl implements TestRepositoryCustom{
     @Override
     public List<TestEntity> findAllByNameByQuerydsl(String name) {
         return queryFactory.selectFrom(QTestEntity.testEntity)
+                .where(QTestEntity.testEntity.name.eq(name))
                 .fetch();
     }
 }
